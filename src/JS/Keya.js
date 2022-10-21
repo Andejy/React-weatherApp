@@ -1,0 +1,1 @@
+export const wetherKey = '32222364eba1d38b2d76a0818e2025a5';
