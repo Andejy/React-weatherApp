@@ -1,12 +1,19 @@
+import clsx from "clsx";
 import { useContext } from "react";
 import { Context } from "../context/Context";
 import "../CSS/index.css";
 
 const WeatherInfo = () => {
   const { state } = useContext(Context);
-
+  console.log(state.dayHour);
   return (
-    <div className={"card-container"}>
+    <div
+      className={clsx(
+        state.dayHour >= 6 && state.dayHour <= 18 && "card-container",
+        state.dayHour >= 19 && "card-container-niht",
+        typeof state.dayHour !== "number" && "card-container",
+      )}
+    >
       <div className="card-head">
         <h1>
           {state.temp}

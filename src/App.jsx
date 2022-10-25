@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { Context } from "./context/Context";
 import WeatherForm from "./components/WeatherForm";
 import WeatherInfo from "./components/WeatherInfo";
-import "./CSS/app.css";
 
 function App() {
   const { state } = useContext(Context);
