@@ -6,7 +6,6 @@ import WeatherInfo from "./components/WeatherInfo";
 
 function App() {
   const { state } = useContext(Context);
-  console.log(state);
 
   return (
     <body
@@ -14,7 +13,7 @@ function App() {
         state.temp > 15 && "summer",
         state.temp < 16 && state.temp >= 10 && "template",
         state.temp < 10 && "cold",
-        typeof state.temp !== "number" && "summer",
+        typeof state.temp !== "number" && "cold",
       )}
     >
       <div>

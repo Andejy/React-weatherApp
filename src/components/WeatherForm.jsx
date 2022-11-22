@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { Context } from "../context/Context";
 import * as React from "react";
 import Button from "@mui/material/Button";
-
+//el weatherForm es el componente que muestra el formulario para buscar el clima
 const WeatherForm = () => {
   const { getWeather, state } = useContext(Context);
   return (
@@ -11,6 +11,7 @@ const WeatherForm = () => {
       className={clsx(
         state.dayHour >= 6 && state.dayHour <= 18 && "card-form",
         state.dayHour >= 19 && "card-form-night",
+        state.dayHour >= 1 && state.dayHour <= 5 && "card-form-night",
         typeof state.dayHour !== "number" && "card-form",
       )}
     >
